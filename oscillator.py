@@ -124,7 +124,7 @@ eig_vectors = eig_vectors[:, inds]
 
 for i in range(10):
     # find the bounds at the energy level
-    length = len(anharmonic)
+    length = len(harmonic)
     closest_ind_lower = np.abs(eig_values[i] - harmonic[:round(length / 2)]).argmin()
     closest_ind_upper = np.abs(eig_values[i] - harmonic[round(length / 2):]).argmin()
     closest_ind_upper += round(length / 2)
@@ -170,7 +170,7 @@ for i in range(10):
     closest_ind_upper += round(length / 2)
     
     # weight wavefunction and shift to proper energy level
-    y = -eig_vectors[:, i]
+    y = eig_vectors[:, i]
     y = 3.5 * y + eig_values[i]
             
     # add items to plot
