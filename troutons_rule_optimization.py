@@ -37,6 +37,18 @@ if __name__ == "__main__":
     initial_guess = [1, 1]
     result = scipy.optimize.minimize(objective_fn, initial_guess, args=(x, y))
     slope, intercept = result.x 
+    
+    # The value of the slope did not change at all; at least, it didn't change to 3 decimal places, which is the significance
+    # I have included for both plots. Both linear regression and optimization are perfectly fine ways to determine the slope
+    # and intercept for this problem. However, one major disadvantage of optimization is the need for an initial guess for the
+    # parameters to be optimized. In this case, a lackluster guess of the parameters, [1, 1] for slope and intercept respectively,
+    # worked fine and produced results that are consistent with a linear regression method. In other, more complicated fittings,
+    # this haphazard intial guess may result in the the minimization being stuck in a local minimum for each parameter depending
+    # on the convergence criterion set by scipy. Even without the possibility of being caught in a local minimum, the computational
+    # cost of poor initial guesses can be drastically worse for more complicated systems or equations with more than two parameters
+    # to fit. On the other hand, extrodinarily large data sets can make an ordinary least squares dependent algorithm quite slow.
+    # Though generally, scipy.optimize.minimize() is much more appropriate for non-linear systems, particularly since a BFGS 
+    # algorithm is applied when no method is specified within the function.
 
     T_val = []
     H_val = []
