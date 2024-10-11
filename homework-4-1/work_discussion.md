@@ -1,0 +1,7 @@
+# Comparison of Isothermal and Adiabatic Work
+
+Comparing the isothermal and adiabatic work against final volume curves, the curve representing isothermal work exhibits a steeper decline as volume increases. This indicates that, for the same volume change, the work done during the isothermal process decreases more rapidly than during the adiabatic process.
+
+- **Isothermal Process**: In an isothermal process, the temperature remains constant. As the volume increases, the system does work on the surroundings by expanding. However, the internal energy of the system does not change, resulting in a steeper decline of work done as the final volume increases. Heat is exchanged with the surroundings, resulting in sharper drop-off in work.
+
+- **Adiabatic Process**: In an adiabatic process, there is no heat exchanged with the surroundings. The work done is affected not only by the volume change but also by the temperature change of the system. As the volume increases, the work done drops-off more slowly relative to the work done on an isothermal system as a function of final volume because the internal energy of the system must change. This results in a more gradual decline in the amount of work done as a function of final volume for an adiabatic system.
